@@ -26,11 +26,11 @@ export const Slider = () => {
   const newArr = () => {
     const firstImg = carouselSlide.slice(0, 1);
     const lastImg = carouselSlide.slice(-1);
-    setCarouselSlide([lastImg, ...carouselSlide, firstImg]);
+    return [...lastImg, ...carouselSlide, ...firstImg];
   };
 
   useEffect(() => {
-    return newArr();
+    setCarouselSlide(newArr);
   }, []);
 
   const [sec, setSec] = useState(0);
