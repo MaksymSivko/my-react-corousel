@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import img1 from '../../img/1.jpg';
 import img2 from '../../img/2.jpg';
 import img3 from '../../img/3.jpg';
@@ -8,7 +8,6 @@ import img6 from '../../img/6.jpg';
 import img7 from '../../img/7.jpg';
 import img8 from '../../img/8.jpg';
 import { ImgSlide } from '../imgSlid/ImgSlide';
-
 import './slider.scss';
 
 export const Slider = () => {
@@ -31,6 +30,7 @@ export const Slider = () => {
 
   useEffect(() => {
     setCarouselSlide(newArr);
+    // eslint-disable-next-line
   }, []);
 
   const [sec, setSec] = useState(0);
